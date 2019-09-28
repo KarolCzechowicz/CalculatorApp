@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("\n*** Welcome to my Calculator App! ***\n\n" +
                 "** Please provide File Name of Your text file with extension below - example: filename.txt.\n" +
-                "This Calculator supports commands such as: add, subtract, multiply, divide and apply. \n" +
+                "This Calculator supports commands such as: add, subtract, multiply, divide, power, root (ex. works only from positive numbers) and apply. \n" +
                 "If You want to quit input 'q'. **");
         Scanner scan = new Scanner(System.in);
         String fileName;
@@ -23,9 +23,9 @@ public class Main {
                 System.out.println("* File name " + fileName + " is valid *");
                 ArrayList<String> arrayList = FileLoader.loadFile(fileName);
 
-                if (!arrayList.get(0).equals("1")) {
+                if (!arrayList.get(0).equals("1") && arrayList != null) {
                     double solution = CalculateService.calculate(arrayList);
-                    System.out.println("* Calculations Completed! *\n" +
+                    System.out.println("* Calculations Completed! *\n\n" +
                             "*********************\n" +
                             "* Answer is: " + solution + " *\n" +
                             "*********************\n");

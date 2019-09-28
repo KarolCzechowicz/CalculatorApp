@@ -24,6 +24,15 @@ public class CalculateService extends CalculateTasksService {
                     System.out.println("* Divider can't equal 0 *");
                     System.out.println("* Divide action will be skipped *");
                 }
+            } else if (arrayList.get(i).equals("power")) {
+                solution = power(solution, b);
+            } else if (arrayList.get(i).equals("root")) {
+                try {
+                    solution = root(solution, b);
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e);
+                    System.out.println("* Root action will be skipped *");
+                }
             }
         }
         return solution;

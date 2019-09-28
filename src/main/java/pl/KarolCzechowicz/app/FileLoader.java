@@ -23,12 +23,12 @@ public class FileLoader {
                             "Provide correct text file name below or exit by 'q'. *");
                     arrayList.set(0, "1");
                     return arrayList;
-                } else if ((tab[1].matches("\\d+") || tab[1].matches("\\d+\\.\\d+")) && (tab[0].equals("add") || tab[0].equals("subtract") || tab[0].equals("multiply") || tab[0].equals("divide") || tab[0].equals("apply"))) {
+                } else if ((tab[1].matches("\\d+") || tab[1].matches("\\d+\\.\\d+")) && (tab[0].equals("add") || tab[0].equals("subtract") || tab[0].equals("multiply") || tab[0].equals("divide") || tab[0].equals("power") || tab[0].equals("root") || tab[0].equals("apply"))) {
                     arrayList.add(tab[0]);
                     arrayList.add(tab[1]);
                 } else {
                     System.out.println("* Please check correctness of commands and numbers. Lines should be in example format: 'add 20'\n" +
-                            "supported operations are: 'add', 'subtract', 'divide', 'multiply', 'apply'\n" +
+                            "supported operations are: 'add', 'subtract', 'divide', 'multiply', 'power', 'root', 'apply'\n" +
                             "supported numbers are in format: '0' or '0.0' \n" +
                             "Provide correct text file name below or exit by 'q'. *");
                     arrayList.set(0, "1");
