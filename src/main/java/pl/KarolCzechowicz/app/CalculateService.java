@@ -21,8 +21,8 @@ public class CalculateService extends CalculateTasksService {
                 try {
                     solution = divide(solution, b);
                 } catch (IllegalArgumentException e) {
-                    System.out.println("Divider can't equal 0");
-                    System.out.println("Divide action will be skipped");
+                    System.out.println("* Divider can't equal 0 *");
+                    System.out.println("* Divide action will be skipped *");
                 }
             }
         }

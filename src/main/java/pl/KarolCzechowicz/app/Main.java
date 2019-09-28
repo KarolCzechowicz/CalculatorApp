@@ -17,25 +17,22 @@ public class Main {
         while (true) {
             fileName = scan.nextLine();
             if (fileName.equals("q")) {
-                System.out.println("Quitting");
+                System.out.println("* Quitting *");
                 break;
             } else if (fileName.matches("[^\\\\/:*?\"<>|]+\\.[^\\\\/:*?\"<>|]+")) {
-                System.out.println("File name " + fileName + " is valid");
+                System.out.println("* File name " + fileName + " is valid *");
                 ArrayList<String> arrayList = FileLoader.loadFile(fileName);
-                if (arrayList == null) {
-                    System.out.println("Quitting");
-                    break;
-                } else {
-                    double solution = CalculateService.calculate(arrayList);
-                    System.out.println("Calculations Completed!\n" +
-                            "***************************\n" +
-                            "* Answer is: " + solution + " *\n" +
-                            "***************************\n");
-                    System.out.println("You can add new file name with instructions below or quit by 'q'");
-                }
 
+                if (!arrayList.get(0).equals("1")) {
+                    double solution = CalculateService.calculate(arrayList);
+                    System.out.println("* Calculations Completed! *\n" +
+                            "*********************\n" +
+                            "* Answer is: " + solution + " *\n" +
+                            "*********************\n");
+                    System.out.println("* You can add new file name with instructions below or quit by 'q'. *");
+                }
             } else {
-                System.out.println("File name is incorrect please input correct file name - example: filename.txt");
+                System.out.println("* File name is incorrect please input correct file name - example: filename.txt *");
             }
         }
         scan.close();

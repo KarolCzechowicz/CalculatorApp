@@ -16,7 +16,7 @@ abstract class CalculateTasksService {
 
     static double divide(double a, double b) {
         if (b == 0.0 || b == 0) {
-            throw new IllegalArgumentException("Argument 'divisor' is 0");
+            throw new IllegalArgumentException("* Argument 'divisor' is 0 *");
         } else {
             return a / b;
         }
